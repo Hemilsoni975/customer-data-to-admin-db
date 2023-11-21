@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}CONTACT US{% endblock title %}
+{% block body %}
+<div>
+     <img src="https://tse2.explicit.bing.net/th?id=OIP.l-PqLGTMno-kXLffJdyrawHaDB&pid=Api&P=0&h=180" class="d-block w-100 py-0" alt="">
+     </div>
+     <div class="container py-4">
+     <h3 class="text-center">CONTACT US</h3>
+     
+     <form method="post" action="/contact/">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email address">
+          </div>
+
+          <div class="mb-3">
+            <label for="phone" class="form-label">Contact number </label>
+            <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter your contact details">
+          </div>
+          
+          <div class="mb-3">
+            <textarea name="describe" id="describe" cols="173.5" rows="5" placeholder="Tell me about what you want to contact me for..."></textarea>
+          </div>
+             
+          <!-- <div class="mb-3">
+            <label for="Password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="Password" name="Password" placeholder="enter your password">
+          </div> -->
+
+          <!-- <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div> -->
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+</div>
+{% endblock body %}
